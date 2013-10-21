@@ -97,6 +97,18 @@ class { 'install_postgres': }
 
 class { 'memcached': }
 
+# --- imagemagick --------------------------------------------------------------
+
+package {
+  "imagemagick":
+    ensure => installed
+}
+
+package {
+  "libmagickwand-dev":
+    ensure  => installed
+}
+
 # --- Packages -----------------------------------------------------------------
 
 package { 'curl':
