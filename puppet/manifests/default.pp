@@ -93,6 +93,13 @@ class install_postgres {
 }
 class { 'install_postgres': }
 
+# --- Redis --------------------------------------------------------------------
+
+class { 'redis':
+  conf_port => '6379',
+  conf_bind => '0.0.0.0',
+}
+
 # --- Memcached ----------------------------------------------------------------
 
 class { 'memcached': }
